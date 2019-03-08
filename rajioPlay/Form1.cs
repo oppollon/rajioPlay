@@ -56,6 +56,13 @@ namespace rajioPlay
             if (title == "") return "Unknown :(";
             return title;
         }
+
+        public void UncheckAll()
+        {
+            radioToolStripMenuItem1.CheckState = CheckState.Unchecked;
+            edenOfTheWestToolStripMenuItem.CheckState = CheckState.Unchecked;
+            listenmoeToolStripMenuItem.CheckState = CheckState.Unchecked;
+        }
         public void playRadioSong(string url)
         {
             try
@@ -63,9 +70,7 @@ namespace rajioPlay
                 if (Bass.BASS_ChannelPlay(channel, false))
                 {
                     Bass.BASS_ChannelStop(channel);
-                    radioToolStripMenuItem1.CheckState = CheckState.Unchecked;
-                    edenOfTheWestToolStripMenuItem.CheckState = CheckState.Unchecked;
-                    listenmoeToolStripMenuItem.CheckState = CheckState.Unchecked;
+                    UncheckAll();
 
                 }
                 channel = Bass.BASS_StreamCreateURL(url, 0, BASSFlag.BASS_DEFAULT, null, IntPtr.Zero);
@@ -115,6 +120,7 @@ namespace rajioPlay
             if (Bass.BASS_Start())
             {
                 Bass.BASS_ChannelStop(channel);
+                UncheckAll();
             }
         }
     }
