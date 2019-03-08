@@ -63,6 +63,10 @@ namespace rajioPlay
                 if (Bass.BASS_ChannelPlay(channel, false))
                 {
                     Bass.BASS_ChannelStop(channel);
+                    radioToolStripMenuItem1.CheckState = CheckState.Unchecked;
+                    edenOfTheWestToolStripMenuItem.CheckState = CheckState.Unchecked;
+                    listenmoeToolStripMenuItem.CheckState = CheckState.Unchecked;
+
                 }
                 channel = Bass.BASS_StreamCreateURL(url, 0, BASSFlag.BASS_DEFAULT, null, IntPtr.Zero);
             }
@@ -81,16 +85,19 @@ namespace rajioPlay
         private void radioToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             playRadioSong("https://relay0.r-a-d.io/main.mp3");
+            radioToolStripMenuItem1.CheckState = CheckState.Checked;
         }
 
         private void edenOfTheWestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             playRadioSong("http://edenofthewest.com:8080/eden.mp3");
+            edenOfTheWestToolStripMenuItem.CheckState = CheckState.Checked;
         }
 
         private void listenmoeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             playRadioSong("https://listen.moe/fallback");
+            listenmoeToolStripMenuItem.CheckState = CheckState.Checked;
         }
 
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
