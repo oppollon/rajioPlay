@@ -34,12 +34,13 @@ namespace rajioPlay
                 try
                 {
                     Bass.BASS_SetConfig(BASSConfig.BASS_CONFIG_NET_PLAYLIST, 2);
+                    Bass.BASS_SetConfig(BASSConfig.BASS_CONFIG_UNICODE, true); //unicode error
                     Bass.BASS_StreamFree(channel);
                     Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero); //Init BASS
                 }
                 catch
                 {
-                    ntfPlayer.ShowBalloonTip(1000, "Dameee!", "Rajio's got just hurt! :(", ToolTipIcon.Error);
+                    ntfPlayer.ShowBalloonTip(1000, "Dameee!", "Rajio's got just hurt! :( " + Bass.BASS_ErrorGetCode(), ToolTipIcon.Error);
                 }
                 ntfPlayer.ShowBalloonTip(1000, "Ohayoo!", "Rajio's is waiting in the notification tray!", ToolTipIcon.None);
 
@@ -47,7 +48,7 @@ namespace rajioPlay
         }
         public string CurrentPlay()
         {
-            string[] b = Bass.BASS_ChannelGetTagsMETA(channel);
+            String[] b = Bass.BASS_ChannelGetTagsMETA(channel);
             if (b == null) return "Unknown :(";
             int sep = b[0].IndexOf(";");
             if (sep == 0) return "Unknown :(";
@@ -122,6 +123,18 @@ namespace rajioPlay
                 Bass.BASS_ChannelStop(channel);
                 UncheckAll();
             }
+        }
+
+        private void duckDuckGoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string url = "https://duckduckgo.com/?q=" + CurrentPlay().Replace(" ", "+") + "&ia=web";
+            System.Diagnostics.Process.Start(url);
+        }
+
+        private void youTubeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string url = "https://www.youtube.com/results?search_query=" + CurrentPlay().Replace(" ", "+");
+            System.Diagnostics.Process.Start(url);
         }
     }
 }

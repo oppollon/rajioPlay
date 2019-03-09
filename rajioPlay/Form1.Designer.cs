@@ -39,6 +39,9 @@
             this.currentSongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.duckDuckGoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rajioMenu.SuspendLayout();
@@ -74,21 +77,21 @@
             // radioToolStripMenuItem1
             // 
             this.radioToolStripMenuItem1.Name = "radioToolStripMenuItem1";
-            this.radioToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.radioToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.radioToolStripMenuItem1.Text = "r/a/dio";
             this.radioToolStripMenuItem1.Click += new System.EventHandler(this.radioToolStripMenuItem1_Click);
             // 
             // edenOfTheWestToolStripMenuItem
             // 
             this.edenOfTheWestToolStripMenuItem.Name = "edenOfTheWestToolStripMenuItem";
-            this.edenOfTheWestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.edenOfTheWestToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.edenOfTheWestToolStripMenuItem.Text = "eden";
             this.edenOfTheWestToolStripMenuItem.Click += new System.EventHandler(this.edenOfTheWestToolStripMenuItem_Click);
             // 
             // listenmoeToolStripMenuItem
             // 
             this.listenmoeToolStripMenuItem.Name = "listenmoeToolStripMenuItem";
-            this.listenmoeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listenmoeToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.listenmoeToolStripMenuItem.Text = "listen.moe";
             this.listenmoeToolStripMenuItem.Click += new System.EventHandler(this.listenmoeToolStripMenuItem_Click);
             // 
@@ -96,7 +99,8 @@
             // 
             this.currentSongToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showToolStripMenuItem,
-            this.copyToolStripMenuItem});
+            this.copyToolStripMenuItem,
+            this.searchToolStripMenuItem});
             this.currentSongToolStripMenuItem.Name = "currentSongToolStripMenuItem";
             this.currentSongToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.currentSongToolStripMenuItem.Text = "Current song";
@@ -104,16 +108,39 @@
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.showToolStripMenuItem.Text = "Show";
             this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.duckDuckGoToolStripMenuItem,
+            this.youTubeToolStripMenuItem});
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchToolStripMenuItem.Text = "Search";
+            // 
+            // duckDuckGoToolStripMenuItem
+            // 
+            this.duckDuckGoToolStripMenuItem.Name = "duckDuckGoToolStripMenuItem";
+            this.duckDuckGoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.duckDuckGoToolStripMenuItem.Text = "DuckDuckGo";
+            this.duckDuckGoToolStripMenuItem.Click += new System.EventHandler(this.duckDuckGoToolStripMenuItem_Click);
+            // 
+            // youTubeToolStripMenuItem
+            // 
+            this.youTubeToolStripMenuItem.Name = "youTubeToolStripMenuItem";
+            this.youTubeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.youTubeToolStripMenuItem.Text = "YouTube";
+            this.youTubeToolStripMenuItem.Click += new System.EventHandler(this.youTubeToolStripMenuItem_Click);
             // 
             // playToolStripMenuItem
             // 
@@ -154,6 +181,9 @@
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem duckDuckGoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem youTubeToolStripMenuItem;
     }
 }
 
