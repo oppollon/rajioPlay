@@ -44,6 +44,7 @@
             this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.likeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rajioMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // 
             this.ntfPlayer.ContextMenuStrip = this.rajioMenu;
             this.ntfPlayer.Icon = ((System.Drawing.Icon)(resources.GetObject("ntfPlayer.Icon")));
-            this.ntfPlayer.Text = "uwu I\'m currently watching you, sicko pedo";
+            this.ntfPlayer.Text = "uwu I\'m currently just sending all your data to the big guys";
             this.ntfPlayer.Visible = true;
             // 
             // rajioMenu
@@ -77,21 +78,21 @@
             // radioToolStripMenuItem1
             // 
             this.radioToolStripMenuItem1.Name = "radioToolStripMenuItem1";
-            this.radioToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
+            this.radioToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.radioToolStripMenuItem1.Text = "r/a/dio";
             this.radioToolStripMenuItem1.Click += new System.EventHandler(this.radioToolStripMenuItem1_Click);
             // 
             // edenOfTheWestToolStripMenuItem
             // 
             this.edenOfTheWestToolStripMenuItem.Name = "edenOfTheWestToolStripMenuItem";
-            this.edenOfTheWestToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.edenOfTheWestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.edenOfTheWestToolStripMenuItem.Text = "eden";
             this.edenOfTheWestToolStripMenuItem.Click += new System.EventHandler(this.edenOfTheWestToolStripMenuItem_Click);
             // 
             // listenmoeToolStripMenuItem
             // 
             this.listenmoeToolStripMenuItem.Name = "listenmoeToolStripMenuItem";
-            this.listenmoeToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.listenmoeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listenmoeToolStripMenuItem.Text = "listen.moe";
             this.listenmoeToolStripMenuItem.Click += new System.EventHandler(this.listenmoeToolStripMenuItem_Click);
             // 
@@ -99,6 +100,7 @@
             // 
             this.currentSongToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showToolStripMenuItem,
+            this.likeToolStripMenuItem,
             this.copyToolStripMenuItem,
             this.searchToolStripMenuItem});
             this.currentSongToolStripMenuItem.Name = "currentSongToolStripMenuItem";
@@ -131,14 +133,14 @@
             // duckDuckGoToolStripMenuItem
             // 
             this.duckDuckGoToolStripMenuItem.Name = "duckDuckGoToolStripMenuItem";
-            this.duckDuckGoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.duckDuckGoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.duckDuckGoToolStripMenuItem.Text = "DuckDuckGo";
             this.duckDuckGoToolStripMenuItem.Click += new System.EventHandler(this.duckDuckGoToolStripMenuItem_Click);
             // 
             // youTubeToolStripMenuItem
             // 
             this.youTubeToolStripMenuItem.Name = "youTubeToolStripMenuItem";
-            this.youTubeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.youTubeToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.youTubeToolStripMenuItem.Text = "YouTube";
             this.youTubeToolStripMenuItem.Click += new System.EventHandler(this.youTubeToolStripMenuItem_Click);
             // 
@@ -156,13 +158,21 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // likeToolStripMenuItem
+            // 
+            this.likeToolStripMenuItem.Name = "likeToolStripMenuItem";
+            this.likeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.likeToolStripMenuItem.Text = "Like";
+            this.likeToolStripMenuItem.Click += new System.EventHandler(this.likeToolStripMenuItem_Click);
+            // 
             // rajio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(191, 96);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rajio";
-            this.Text = "rajio";
+            this.Text = "ラジオ";
             this.rajioMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -184,6 +194,7 @@
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem duckDuckGoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem youTubeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem likeToolStripMenuItem;
     }
 }
 

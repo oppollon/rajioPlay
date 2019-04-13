@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using Un4seen.Bass;
 
@@ -18,23 +19,22 @@ namespace rajioPlay
         {
             InitializeComponent();
 
-            //Hide app
-            this.WindowState = FormWindowState.Minimized;
-            this.FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            this.ShowInTaskbar = false;
-
-            //Load
+            //on Load
             onLoad();
         }
 
         public void onLoad()
         {
-            if(this.WindowState == FormWindowState.Minimized)
+            //Hide app
+            this.WindowState = FormWindowState.Minimized;
+            this.FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            this.ShowInTaskbar = false;
+
+            if (this.WindowState == FormWindowState.Minimized)
             {
                 try
                 {
                     Bass.BASS_SetConfig(BASSConfig.BASS_CONFIG_NET_PLAYLIST, 2);
-                    Bass.BASS_SetConfig(BASSConfig.BASS_CONFIG_UNICODE, true); //unicode error
                     Bass.BASS_StreamFree(channel);
                     Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero); //Init BASS
                 }
@@ -48,13 +48,13 @@ namespace rajioPlay
         }
         public string CurrentPlay()
         {
-            String[] b = Bass.BASS_ChannelGetTagsMETA(channel);
-            if (b == null) return "Unknown :(";
+            string[] b = Bass.BASS_ChannelGetTagsMETA(channel);
+            if (b == null) return "Unknown :( (null)";
             int sep = b[0].IndexOf(";");
-            if (sep == 0) return "Unknown :(";
+            if (sep == 0) return "Unknown :( (no seperator)";
             string title = b[0].Substring(0, sep);
             title = title.Substring(title.IndexOf("=") + 1).Replace("'", "");
-            if (title == "") return "Unknown :(";
+            if (title == "") return "Unknown :( (no title)";
             return title;
         }
 
@@ -135,6 +135,26 @@ namespace rajioPlay
         {
             string url = "https://www.youtube.com/results?search_query=" + CurrentPlay().Replace(" ", "+");
             System.Diagnostics.Process.Start(url);
+        }
+
+        private void likeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string fname = "likes.txt";
+            if (!(File.Exists(fname)))
+            {
+                string createText = "Liked Songs - File created on " + DateTime.Now.ToString() + Environment.NewLine;
+                File.WriteAllText(fname, createText, Encoding.UTF8);
+            }
+
+            try
+            {
+                string appendText = DateTime.Now.ToString() + ": " + CurrentPlay() + Environment.NewLine;
+                File.AppendAllText(fname, appendText, Encoding.UTF8);
+            }
+            catch (Exception ex)
+            {
+                ntfPlayer.ShowBalloonTip(1000, "FileWrite Error!", ex.Message, ToolTipIcon.Error);
+            }
         }
     }
 }
