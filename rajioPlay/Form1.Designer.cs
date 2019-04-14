@@ -33,18 +33,15 @@
             this.ntfPlayer = new System.Windows.Forms.NotifyIcon(this.components);
             this.rajioMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.radioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.radioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.edenOfTheWestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listenmoeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currentSongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.likeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.duckDuckGoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.likeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rajioMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,34 +64,9 @@
             // 
             // radioToolStripMenuItem
             // 
-            this.radioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.radioToolStripMenuItem1,
-            this.edenOfTheWestToolStripMenuItem,
-            this.listenmoeToolStripMenuItem});
             this.radioToolStripMenuItem.Name = "radioToolStripMenuItem";
             this.radioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.radioToolStripMenuItem.Text = "Radio";
-            // 
-            // radioToolStripMenuItem1
-            // 
-            this.radioToolStripMenuItem1.Name = "radioToolStripMenuItem1";
-            this.radioToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.radioToolStripMenuItem1.Text = "r/a/dio";
-            this.radioToolStripMenuItem1.Click += new System.EventHandler(this.radioToolStripMenuItem1_Click);
-            // 
-            // edenOfTheWestToolStripMenuItem
-            // 
-            this.edenOfTheWestToolStripMenuItem.Name = "edenOfTheWestToolStripMenuItem";
-            this.edenOfTheWestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.edenOfTheWestToolStripMenuItem.Text = "eden";
-            this.edenOfTheWestToolStripMenuItem.Click += new System.EventHandler(this.edenOfTheWestToolStripMenuItem_Click);
-            // 
-            // listenmoeToolStripMenuItem
-            // 
-            this.listenmoeToolStripMenuItem.Name = "listenmoeToolStripMenuItem";
-            this.listenmoeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listenmoeToolStripMenuItem.Text = "listen.moe";
-            this.listenmoeToolStripMenuItem.Click += new System.EventHandler(this.listenmoeToolStripMenuItem_Click);
             // 
             // currentSongToolStripMenuItem
             // 
@@ -110,14 +82,21 @@
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.showToolStripMenuItem.Text = "Show";
             this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
+            // 
+            // likeToolStripMenuItem
+            // 
+            this.likeToolStripMenuItem.Name = "likeToolStripMenuItem";
+            this.likeToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.likeToolStripMenuItem.Text = "Like";
+            this.likeToolStripMenuItem.Click += new System.EventHandler(this.likeToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
@@ -127,7 +106,7 @@
             this.duckDuckGoToolStripMenuItem,
             this.youTubeToolStripMenuItem});
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.searchToolStripMenuItem.Text = "Search";
             // 
             // duckDuckGoToolStripMenuItem
@@ -158,13 +137,6 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // likeToolStripMenuItem
-            // 
-            this.likeToolStripMenuItem.Name = "likeToolStripMenuItem";
-            this.likeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.likeToolStripMenuItem.Text = "Like";
-            this.likeToolStripMenuItem.Click += new System.EventHandler(this.likeToolStripMenuItem_Click);
-            // 
             // rajio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,9 +155,6 @@
         private System.Windows.Forms.NotifyIcon ntfPlayer;
         private System.Windows.Forms.ContextMenuStrip rajioMenu;
         private System.Windows.Forms.ToolStripMenuItem radioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem radioToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem edenOfTheWestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listenmoeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem currentSongToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
