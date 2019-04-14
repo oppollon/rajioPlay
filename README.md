@@ -2,8 +2,8 @@
 a somewhat lightwheight and not completely open-source internet radio player in the windows taskbar / notification tray
 
 ## intro
-I initially made this program for myself (private use) using [BASS.NET](http://www.bass.radio42.com/) which I believe is a freeware and not open-source! This program however is open-source. I decided to publish it.
-I made this program since I couldn't find any other program which just plays internet radios only whitout unnecessary features.
+I initially made this program for myself (private use) using [BASS.NET](http://www.bass.radio42.com/) which I believe is a freeware and not open-source! This program however is open-source, you could this for your personal education if you can't hold back. I decided to publish it. I haven't deciced what license I want to use or if I ever am going to use one (don't ask me).
+I made this program since I couldn't find any other program which just plays internet radios only - whitout unnecessary features and GUI, only ToolStripMenuItems, some text files and an Akari icon.
 
 ## requirements
 - .NET Framework 4.5+ (I use 7.2)
@@ -23,7 +23,7 @@ r/a/dio|https://stream.r-a-d.io/main.mp3
 eden|http://edenofthewest.com:8080/eden.mp3
 listen.moe|https://listen.moe/fallback
 ```
-Obvious notice: The links must be audio links and usually should have extentions like .mp3, .aac, .oog, .pls, .m3u, etc. Please don't randomly insert links!
+Obvious notice: The links must be audio links and usually should have extentions like .mp3, .aac, .ogg, .pls, .m3u, etc. Please don't randomly insert links!
 
 6. close the .txt and start the .exe again
 Now, you should be able to select your Radio from the ToolStripMenu (by right clicking on the icon).
@@ -51,4 +51,4 @@ Everything is pretty self-explanatory, once you try it out. But if there are que
 - [ ] add own search engines
 
 ## where can I complain and cry *in private*?
-I prefer you don't, but [click here](mailto:tatomete@rptonmail.com) if you can't help yourself.
+I prefer you don't, but [click here](mailto:tatomete@rptonmail.com) if you can't help yourself. You will however be blocked if I feel annoyed or needlessly e-mailed.
