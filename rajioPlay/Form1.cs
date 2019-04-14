@@ -66,10 +66,11 @@ namespace rajioPlay
             {
                 if (Bass.BASS_ChannelPlay(channel, false))
                 {
-                    Bass.BASS_ChannelStop(channel);
                     UncheckAll();
+                    Bass.BASS_ChannelStop(channel);
                 }
-                channel = Bass.BASS_StreamCreateURL(url, 0, BASSFlag.BASS_DEFAULT, null, IntPtr.Zero);
+                Bass.BASS_StreamFree(channel);
+                channel = Bass.BASS_StreamCreateURL(url, 0, BASSFlag.BASS_STREAM_STATUS, null, IntPtr.Zero);
             }
             catch
             {
@@ -80,6 +81,16 @@ namespace rajioPlay
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Bass.BASS_ChannelStop(channel);
+                Bass.BASS_Free();
+            }
+            catch
+            {
+                ntfPlayer.ShowBalloonTip(1500, "Weird error.. still exiting.", "BASS Error:" + Bass.BASS_ErrorGetCode(), ToolTipIcon.Error);
+                Application.Exit();
+            }
             Application.Exit();
         }
 
@@ -173,12 +184,12 @@ namespace rajioPlay
             System.Windows.Forms.Clipboard.SetText(CurrentPlay());
         }
 
-        private void playToolStripMenuItem_Click(object sender, EventArgs e)
+        private void playToolStripMenuItem_Click(object sender, EventArgs e) //stop button
         {
             if (Bass.BASS_Start())
             {
-                Bass.BASS_ChannelStop(channel);
                 UncheckAll();
+                Bass.BASS_ChannelStop(channel);
             }
         }
 
