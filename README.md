@@ -1,6 +1,9 @@
 # rajioPlay (ラジオ)
 a somewhat lightwheight and not completely open-source internet radio player in the windows taskbar / notification tray
 
+![Rajio in my notification tray](https://raw.githubusercontent.com/oppollon/rajioPlay/master/rajosc.PNG)
+
+
 ## intro
 I initially made this program for myself (private use) using [BASS.NET](http://www.bass.radio42.com/) which I believe is a freeware and not open-source! This program however is open-source, you could this for your personal education if you can't hold back. I decided to publish it. I haven't deciced what license I want to use or if I ever am going to use one (don't ask me).
 I made this program since I couldn't find any other program which just plays internet radios only - whitout unnecessary features and GUI, only ToolStripMenuItems, some text files and an Akari icon.
