@@ -9,7 +9,7 @@ I initially made this program for myself (private use) using [BASS.NET](http://w
 I made this program since I couldn't find any other program which just plays internet radios only - whitout unnecessary features and GUI, only ToolStripMenuItems, some text files and an Akari icon.
 
 ## requirements
-- .NET Framework 4.5+ (I use 7.2)
+- .NET Framework 4.5+ (I use 4.7.2)
 
 ## getting started
 1. download rajioPlay.zip from the [latest release](https://github.com/oppollon/rajioPlay/releases/latest) ..
