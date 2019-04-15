@@ -26,7 +26,8 @@ r/a/dio|https://stream.r-a-d.io/main.mp3
 eden|http://edenofthewest.com:8080/eden.mp3
 listen.moe|https://listen.moe/fallback
 ```
-Obvious notice: The links must be **direct audio links** and usually should have extentions like .mp3, .aac, .ogg, etc. Please don't randomly insert links! Currently .pls and .m3u links don't work, I'm gonna implement playlist support when I feel like it.
+Obvious notice: The links must be **direct audio links** and usually should have extentions like .mp3, .aac, .ogg, .pls etc. Please don't randomly insert links! Currently some .m3u links don't work, I'm gonna implement playlist support when I feel like it.<br />
+You can get direct audio urls from [www.radio-browser.info](http://www.radio-browser.info).
 
 6. close the .txt and start the .exe again
 Now, you should be able to select your Radio from the ToolStripMenu (by right clicking on the icon).
