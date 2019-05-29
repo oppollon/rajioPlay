@@ -1,5 +1,5 @@
 # rajioPlay (ラジオ)
-a somewhat lightwheight* and partly open-source internet radio player in the windows taskbar / notification tray <br />
+a somewhat lightwheight* and free internet radio player in the windows taskbar / notification tray <br />
 *(172 SLOC , 806 KB, minimal RAM usage, no WinForms GUI)*
 
 ![Rajio in my notification tray](https://raw.githubusercontent.com/oppollon/rajioPlay/master/rajosc.PNG)
